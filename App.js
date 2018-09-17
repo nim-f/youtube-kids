@@ -6,14 +6,14 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import React, { Component } from 'react'
+import { Platform, StyleSheet, Text, View, SafeAreaView } from 'react-native'
 import { Provider } from 'react-redux'
 import store from './src/redux'
 
 import Search from './src/components/search/search'
 
-type Props = {};
+type Props = {}
 export default class App extends Component<Props> {
   render() {
     return (
@@ -22,7 +22,7 @@ export default class App extends Component<Props> {
           <Search />
         </SafeAreaView>
       </Provider>
-    );
+    )
   }
 }
 
@@ -31,4 +31,4 @@ const s = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ddd'
   }
-});
+})

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {API_KEY} from "../api_keys";
+import { API_KEY } from '../api_keys'
 
 export const BASE_URL = 'https://www.googleapis.com/youtube/v3/'
 

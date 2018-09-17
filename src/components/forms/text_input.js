@@ -1,9 +1,8 @@
-import React from 'react';
-import { TextInput, View, Text } from 'react-native';
-
+import React from 'react'
+import { TextInput, View, Text } from 'react-native'
 
 export default function MyTextInput(props) {
-  const { input, ...inputProps } = props;
+  const { input, ...inputProps } = props
 
   return (
     <View>
@@ -15,5 +14,5 @@ export default function MyTextInput(props) {
         value={input.value}
       />
     </View>
-  );
+  )
 }

@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native'
+import React, { Component } from 'react'
+import { View, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import { searchRequest } from "../../ducks/search";
+import { searchRequest } from '../../ducks/search'
 
-import SearchForm from "./search_form";
+import SearchForm from './search_form'
 
 class Search extends Component {
-
-  submitForm = ({search}) => {
+  submitForm = ({ search }) => {
     this.props.searchRequest(search)
   }
 
@@ -16,7 +15,7 @@ class Search extends Component {
       <View style={s.searchContainer}>
         <SearchForm onSubmit={this.submitForm} />
       </View>
-    );
+    )
   }
 }
 
@@ -33,11 +32,9 @@ const s = StyleSheet.create({
   icon: {
     fontSize: 30
   }
-});
+})
 
 export default connect(
   null,
   { searchRequest }
-)(Search);
-
-
+)(Search)
