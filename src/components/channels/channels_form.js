@@ -15,6 +15,7 @@ class ChannelsForm extends Component {
         <View style={s.formRow}>
           <Text>Add allowed channels</Text>
           <Field
+            placeholder="Type to search..."
             onChange={(e) => this.changeHandler(e)}
             style={s.formInput}
             name={'channel'}

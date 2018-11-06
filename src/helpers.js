@@ -11,7 +11,7 @@ export const storeData = async (key, data) => {
 
 export const retrieveData = async (key) => {
   try {
-    const value = await AsyncStorage.getItem(key)
+    const value = await AsyncStorage.getItem(key) //.clear(() => console.log('!!! cleared')) //
     if (value !== null) {
       console.log('get from storage', value)
       return value

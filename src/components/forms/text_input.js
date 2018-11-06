@@ -2,7 +2,7 @@ import React from 'react'
 import { TextInput, View, Text } from 'react-native'
 
 export default function MyTextInput(props) {
-  const { input, ...inputProps } = props
+  const { input, placeholder, ...inputProps } = props
 
   return (
     <View>
@@ -12,6 +12,7 @@ export default function MyTextInput(props) {
         onBlur={input.onBlur}
         onFocus={input.onFocus}
         value={input.value}
+        placeholder={placeholder}
       />
     </View>
   )

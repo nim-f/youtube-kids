@@ -10,8 +10,8 @@ import {
 } from 'react-native'
 
 class Preview extends Component {
-  saveChannel = (id) => {
-    this.props.addChannel(id)
+  saveChannel = (id, title) => {
+    this.props.addChannel(id, title)
     console.log('id', id)
   }
 
@@ -31,12 +31,16 @@ class Preview extends Component {
         />
         <View>
           <View>
-            <Text style={s.title}>{snippet.title}</Text>
+            {!channel ? <Text style={s.title}>{snippet.title}</Text> : null}
             <Text style={s.channel}>{snippet.channelTitle}</Text>
           </View>
           <View>
             {channel ? (
-              <TouchableOpacity onPress={() => this.saveChannel(id.channelId)}>
+              <TouchableOpacity
+                onPress={() =>
+                  this.saveChannel(id.channelId, snippet.channelTitle)
+                }
+              >
                 <Text>Save Channel</Text>
               </TouchableOpacity>
             ) : null}

@@ -5,6 +5,7 @@ import { channelSearchSelector } from '../../ducks/channels'
 import {
   addAllowedChannel,
   getAllowedChannels,
+  deleteAllowedChannel,
   allowedChannelsSelector
 } from '../../ducks/storage'
 import Preview from '../preview/preview'
@@ -25,7 +26,10 @@ class ChannelsList extends Component {
   render() {
     return (
       <ScrollView>
-        <AllowedList channels={this.props.allowed} />
+        <AllowedList
+          channels={this.props.allowed}
+          deleteChannel={this.props.deleteAllowedChannel}
+        />
         {this.props.channels.map((channel) => (
           <Preview
             video={channel}
@@ -43,6 +47,7 @@ export default connect(
   mapStateToProps,
   {
     addAllowedChannel,
-    getAllowedChannels
+    getAllowedChannels,
+    deleteAllowedChannel
   }
 )(ChannelsList)

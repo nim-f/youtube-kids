@@ -8,15 +8,15 @@ import SettingsScreen from './settings_screen'
 import ChannelsScreen from './channels_screen'
 
 export const MainNavigator = createBottomTabNavigator({
-  search: SearchScreen,
   settings: createStackNavigator(
     {
       settings: SettingsScreen,
       channels: ChannelsScreen
     },
     {
-      initialRouteName: 'settings',
+      initialRouteName: 'channels',
       headerForceInset: { top: 'never', bottom: 'never' }
     }
-  )
+  ),
+  search: SearchScreen
 })
